@@ -1,0 +1,337 @@
+*{
+    margin: 0;
+    padding: 0;
+box-sizing: border-box;
+font-family: 'Source Code Pro', monospace;
+}
+a{text-decoration: none;}
+
+a:hover{
+    text-decoration: none;
+}
+li{list-style:none;}
+
+p{
+    font-size: 0.9rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #f4e623;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 170, 255, 0.342),rgba(255, 0, 200, 0.253)),url('background.jpg') ;
+    background-repeat: no-repeat;
+    background-size: 100% ;
+    clip-path: polygon(100% 0%,100% 75%,50% 100%,0 75%,0 0);
+    position:relative;
+    
+    
+}
+section #top-header{
+    position: absolute;
+    bottom: -200px;
+    height: 200px;
+    width: 100%;
+}
+.header::before{
+    content: "";
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    opacity: 0.4%;
+    z-index: -1;
+    background: linear-gradient(to right, #1e5799 0%,#3ccdbb 0%, #16c9f6 100%);
+   
+}
+
+.navbar::before{
+    content: "";
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    opacity: 0.4%;
+    z-index: -1;
+    background: linear-gradient(to right, #1e5799 0%,#3ccdbb 0%, #16c9f6 100%);
+}
+.nav-item a{
+    color: black ;
+    font-weight: bold;
+}
+
+
+.header-section{
+    width: 100%;
+    height: inherit;
+    color: white;
+    text-align: center;
+    position: relative;
+    
+}
+
+.center-div{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+}
+
+.header-buttons a{
+    border: 1px solid black;
+    border-radius: 100px;
+    margin: 0 5px;
+    padding: 12px 35px;
+    outline: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+
+
+}
+.header-buttons a:hover{
+    color: #f4e623;
+    background:rgb(0, 0, 0);
+    text-decoration: none;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+
+}
+.center-div p{
+    font-size: 1.9rem;
+    padding: 10px 0 20px 0;
+    color: black;
+
+}
+#sidebar{
+    display: flex;
+    flex-flow: row wrap;
+
+
+   
+
+}
+aside {
+    border-radius: 5px;
+    width: 800px;
+    height: 800px;
+    position: relative;
+    background: bisque;
+
+}
+aside .resizable{
+    position: absolute;
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 15px;
+    min-height: 15px;
+
+}
+.resizer{
+    position: absolute;
+    background: black;
+}
+.resizer-r{
+    cursor: col-resize;
+    height: 100%;
+    right: 0;
+    top: 0;
+    width: 5px;
+
+}
+aside{
+    flex: 0 0 20vw;
+    background:linen;
+    padding: 20px;
+    text-align: center;
+    text-decoration-color: darkblue;
+  
+}
+aside ul{
+    list-style: none;
+    padding: 0;
+    padding-top: 30px;
+
+}
+aside ul a{
+    color: black;
+    padding: 10px;
+    padding-top: 30px;
+    display: block;
+    border-bottom: 1px solid grey;
+
+}
+article{
+    padding: 20px;
+   
+}
+.clothing-container{
+    display: flex;
+    justify-content: space-between;
+}
+.box{
+    border: 1px solid #eee;
+     padding: 10px;
+    flex-basis: 32%;
+    max-width: 370px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+
+}
+.box img{
+    width: 100%;
+}
+.call-to-action{
+   align-self: flex-start;
+   margin-top: auto;
+  
+
+}
+.call-to-action a{
+    background: black;
+    border: 2px solid transparent;
+    color: #f4e623;
+    padding: 8px 13px;
+    display:inline-block;
+}
+.call-to-action a:hover{
+    background: transparent;
+    border: 2px solid transparent;
+    color: black;
+    text-decoration: none;
+
+
+}
+section{
+    position: relative;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: 0.5s;
+    
+ }
+ section  .container{
+     position: relative;
+     width: 800px;
+     height: 500px;
+     box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+ }
+ section   .container .user {
+ 
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     display: flex;
+ 
+ }
+ section   .container .user  .imgbx{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     transition: 0.5s;
+ 
+ }
+ section  .container .user  .imgbx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+ section .container .user .formbx{
+     position: relative;
+     width: 1000%;
+     height: 100%;
+     background:papayawhip;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 40px;
+     transition: 0.5s;
+ 
+ }
+ section .container .user .formbx h2{
+     font-size: 25px;
+     font-weight: 700;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+     text-align: center;
+     width: 100%;
+     margin-bottom: 10px;
+     color: rgb(39, 33, 33);
+
+ }
+ section .container .user .formbx  input{
+     width: 100%;
+     padding: 10px;
+     background: honeydew;
+     color: #333;
+     border: none;
+     outline: none;
+     box-shadow: none;
+     font-size: 18px;
+     margin: 8px 0;
+     letter-spacing: 1px;
+     font-weight: 300;
+     text-align: center;
+
+ }
+ section .container .user .formbx input[type="submit"]{
+
+    max-width: 100px;
+    background: #66a0d6;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+letter-spacing: 1px;
+transition: 00.5s;
+
+ }
+ section .container .user .formbx input[type="submit"]:hover{
+    color: #03070a;
+ }
+ section .container .user .formbx .signup{
+
+    position: relative;
+    margin-top: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #555;
+    text-transform: uppercase;
+    font-weight: 300;
+ }
+ section .container .user .formbx .signup a{
+     font-weight: 600;
+     text-decoration: none;
+     color: #62a9ec;
+ }
+ section .container .user .formbx .signup a:hover{
+    font-weight: 600;
+    text-decoration: none;
+    color: #03070a;
+ }
+ 
+ 
